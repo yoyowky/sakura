@@ -1,0 +1,116 @@
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root{ /**/
+  height: 100%
+}
+
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+      'header'
+      'main'
+      'footer'
+  ;
+  grid-template-columns: 1fr;  /* 1 fragment*/
+  grid-template-rows: 5rem 1fr 5rem; /* header, main, footer*/
+  height: 100%
+}
+
+header{
+  grid-area: header;
+  background-color: pink;
+}
+
+main{
+  grid-area: main;
+  background-color: white;
+  padding: 1rem;
+}
+
+footer{
+  grid-area: footer;
+  background-color:pink;
+  color: grey;
+  font-size: 1.5rem;
+}
+/*common*/
+h1{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  color: black;
+  font-weight: normal;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color:orange;
+  background-color:white;
+}
+/*Header*/
+header a{
+  color:grey;
+  padding: 1rem;
+}
+.brand{
+  font-size: 3rem;
+  font-weight: bold;
+}
+.row{  /*for header(nav)*/
+  padding: 0%;
+  display: flex; /* items in one line */
+  flex-wrap: wrap;
+  justify-content: space-between;/*两端对齐*/
+  align-items: center; /*行剧中*/
+}
+
+/*Footer*/
+.row.center{
+  justify-content: center;
+}
+
+/* Image */
+img{
+  /* border-radius: 0.5rem; */
+}
+img.medium{
+  max-width: 29rem;
+  height: 29rem;
+  width:100%
+}
+
+/* Card */
+.card{
+  border: 0.1rem grey solid;
+  background-color: pink;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * { /* all tag under card-body*/
+  margin-bottom: 0.5rem;
+}
+.price{
+  color:grey;
+  font-size: 2rem;
+}
+.rating span{
+  color: grey;
+  margin:0.1rem;
+}
