@@ -17,7 +17,7 @@ const data = {
             image:"/image/box-forever-heart.jpeg",
             price: 290,
             rating:4.5,
-            numReviews: 10,
+            numReviews: 9,
             description: ""
         },
         {
@@ -26,7 +26,7 @@ const data = {
             category:"Rose Box",
             image:"/image/box-gun.jpeg",
             price: 220,
-            rating:4,
+            rating:5,
             numReviews: 10,
             description: ""
         },
@@ -36,7 +36,7 @@ const data = {
             category:"Rose Box",
             image:"/image/box-pink.jpeg",
             price: 180,
-            rating:4,
+            rating:0,
             numReviews: 10,
             description: ""
         },
@@ -46,7 +46,7 @@ const data = {
             category:"Rose Box",
             image:"/image/box-pink.jpeg",
             price: 180,
-            rating:4,
+            rating:3.5,
             numReviews: 10,
             description: ""
         },
@@ -56,8 +56,8 @@ const data = {
             category:"Rose Box",
             image:"/image/box-sup.jpeg",
             price: 240,
-            rating:4,
-            numReviews: 10,
+            rating:2,
+            numReviews: 5,
             description: ""
         },
     ]
