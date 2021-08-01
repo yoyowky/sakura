@@ -1,0 +1,26 @@
+{
+  "name": "easy-shop",
+  "version": "1.0.0",
+  "description": "floral store",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoyowky/sakura.git"
+  },
+  "author": "yoyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoyowky/sakura/issues"
+  },
+  "homepage": "https://github.com/yoyowky/sakura#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
