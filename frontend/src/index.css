@@ -61,6 +61,28 @@ a:hover{
   color:orange;
   background-color:white;
 }
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+button {
+  padding: 1rem;
+  cursor: pointer;
+  border: 0.1rem #a4a4a4 solid;
+}
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+button.primary {
+  background-color: #EFEFEF;
+}
+button.block {
+  width: 100%;
+}
 /*Header*/
 header a{
   color:grey;
@@ -83,6 +105,18 @@ header a{
   justify-content: center;
 }
 
+.row.top{
+  align-items: flex-start;
+}
+
+.col-1{
+  flex: 1 1 25rem;
+}
+
+.col-2{
+  flex: 2 1 50rem;
+}
+
 /* Image */
 img{
   /* border-radius: 0.5rem; */
@@ -92,7 +126,10 @@ img.medium{
   height: 29rem;
   width:100%
 }
-
+img.large{
+  max-width: 60rem;
+  width:90%
+}
 /* Card */
 .card{
   border: 0.1rem grey solid;
@@ -110,7 +147,20 @@ img.medium{
   color:grey;
   font-size: 2rem;
 }
+
+/* Rating */
 .rating span{
   color: grey;
   margin:0.1rem;
+}
+.rating span:last-child{
+  color:black;
+}
+
+/* Alert */
+.success{
+  color: #20a020;
+}
+.error{
+  color: #a02020;
 }

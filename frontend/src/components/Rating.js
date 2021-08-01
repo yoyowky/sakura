@@ -2,7 +2,6 @@ import React from 'react'
 
 export default function Rating(props) {
     const {rating,numReviews} = props;
-    console.log('props', props, rating)
     return (
         <div className="rating">
             <span><i className={

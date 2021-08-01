@@ -6,9 +6,10 @@ const data = {
             category:"Rose Box",
             image:"/image/box-36.jpeg",
             price: 220,
+            countInStock: 1,
             rating:4.5,
             numReviews: 10,
-            description: ""
+            description: "fantastic"
         },
         {
             _id:"2",
@@ -16,6 +17,7 @@ const data = {
             category:"Preserved Flowers",
             image:"/image/box-forever-heart.jpeg",
             price: 290,
+            countInStock: 0,
             rating:4.5,
             numReviews: 9,
             description: ""
@@ -26,6 +28,7 @@ const data = {
             category:"Rose Box",
             image:"/image/box-gun.jpeg",
             price: 220,
+            countInStock: 10,
             rating:5,
             numReviews: 10,
             description: ""
@@ -36,6 +39,7 @@ const data = {
             category:"Rose Box",
             image:"/image/box-pink.jpeg",
             price: 180,
+            countInStock: 10,
             rating:0,
             numReviews: 10,
             description: ""
@@ -46,6 +50,7 @@ const data = {
             category:"Rose Box",
             image:"/image/box-pink.jpeg",
             price: 180,
+            countInStock: 10,
             rating:3.5,
             numReviews: 10,
             description: ""
@@ -56,6 +61,7 @@ const data = {
             category:"Rose Box",
             image:"/image/box-sup.jpeg",
             price: 240,
+            countInStock: 10,
             rating:2,
             numReviews: 5,
             description: ""
