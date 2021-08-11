@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import data from '../data.js';
 import Product from '../components/Product.js';
 import MessageBox from '../components/MessageBox.js';
 import LoadingBox from '../components/LoadingBox.js';
