@@ -69,11 +69,17 @@ ul {
 li {
   margin-top: 1rem;
 }
+input,
+textarea,
+select,
 button {
   padding: 1rem;
   cursor: pointer;
   border: 0.1rem #a4a4a4 solid;
 }
+input:hover,
+select:hover,
+textarea:hover,
 button:hover {
   border: 0.1rem #404040 solid;
 }
