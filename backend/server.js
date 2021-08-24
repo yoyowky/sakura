@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import data from './data.js';
+import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 
 // creste app from express
@@ -12,20 +13,9 @@ mongoose.connect(process.env.MONGODY_URL || 'mongodb://localhost/easy-shop', {
     useCreateIndex: true,
 });
 
-app.get('/api/products/:id',(req, res)=>{
-    const product = data.products.find((product) => product._id === req.params.id) // 要写在一行
-    if(product){
-        res.send(product);
-    } else {
-        res.status(404).send({message:'product not found'})
-    }
-})
-app.get('/api/products',(req, res)=>{
-    res.send(data.products)
-})
-
-// use user router
+// use sub router
 app.use('/api/users', userRouter);
+app.use('/api/products', productRouter)
 
 // define route
 app.get('/',(req, res)=> {
