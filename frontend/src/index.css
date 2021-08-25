@@ -7,6 +7,7 @@ body{
   margin: 0;
   height: 100vh;
   font-size: 1.6rem;-webkit-font-smoothing: antialiased;
+  font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -28,7 +29,7 @@ body{
 
 header{
   grid-area: header;
-  background-color: pink;
+  background-color: darkgray;
 }
 
 main{
@@ -39,7 +40,7 @@ main{
 
 footer{
   grid-area: footer;
-  background-color:pink;
+  background-color:darkgray;
   color: grey;
   font-size: 1.5rem;
 }
@@ -154,7 +155,7 @@ img.small{
 /* Card */
 .card{
   border: 0.1rem grey solid;
-  background-color: pink;
+  background-color: darkgrey;
   border-radius: 0.5rem;
   margin: 1rem;
 }
@@ -208,4 +209,40 @@ img.small{
   padding: 0.2rem 0.7rem;
   font-size: 1.4rem;
   margin-left: 0.2rem;
+}
+
+/* Form */
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem 0;
+  display: block;
+}
+
+/* Dropdown */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #203040;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }

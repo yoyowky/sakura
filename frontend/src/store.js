@@ -6,6 +6,7 @@ import {
     productDetailsReducer,
     productListReducer 
 } from './reducers/productReducers.js';
+import { userSigninReducer } from './reducers/userReducers.js';
 
 
 // to create redux store, need: initial state + reducer
@@ -14,6 +15,11 @@ const initialState = {
         cartItems: localStorage.getItem('cartItems') 
         ? JSON.parse(localStorage.getItem('cartItems'))
         : []
+    },
+    userSignin:{
+        userInfo: localStorage.getItem('userInfo')
+        ? JSON.parse(localStorage.getItem('userInfo'))
+        : null
     }
 };
 // reducer: 2 parameters: state + action => return new state
@@ -25,6 +31,7 @@ const reducer = combineReducers({
     productList: productListReducer,
     productDetails: productDetailsReducer,
     cart: cartReducer,
+    userSignin: userSigninReducer,
 })
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(

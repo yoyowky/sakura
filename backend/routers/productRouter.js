@@ -33,7 +33,7 @@ productRouter.get(
     const id = req.params.id;
     const product = await Product.findById(id);
     if(product){
-      res.send({product});
+      res.send(product);
     } else {
       res.status(404).send({message:'Product Not Found'})
     }
