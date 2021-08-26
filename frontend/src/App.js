@@ -7,6 +7,7 @@ import HomeScreen from './screens/HomeScreen.js';
 import ProductScreen from './screens/ProductScreen.js';
 import SigninScreen from './screens/SigninScreen.js';
 import RegisterScreen from './screens/RegisterScreen.js';
+import ShippingAddressScreen from './screens/ShippingAddressScreen.js';
 
 function App() {
   const cart = useSelector(state=>state.cart);
@@ -52,6 +53,7 @@ function App() {
             <Route path="/cart/:id?" component={CartScreen}></Route>
             <Route path="/signin" component={SigninScreen}></Route>
             <Route path="/register" component={RegisterScreen}></Route>
+            <Route path="/shipping" component={ShippingAddressScreen}></Route>
           </main>
           <footer className="row center">
               <div>All right reserved</div>
