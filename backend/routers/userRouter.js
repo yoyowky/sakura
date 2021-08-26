@@ -27,10 +27,34 @@ userRouter.post(
   })
 )
 
+userRouter.post(
+  '/register',
+  expressAsyncHandler(async (req, res)=>{
+    const user = new User({
+      name: req.body.name,
+      email: req.body.email,
+      password: bcrypt.hashSync(req.body.password, 8),
+    });
+    const exitUser = await User.findOne({email: req.body.email});
+    if(exitUser){
+      res.status(500).send({message: 'Email Already registered'})
+    } else {
+      const createUser = await user.save();
+      res.send({
+        _id: createUser._id,
+        name: createUser.name,
+        password: createUser.password,
+        isAdmin: createUser.isAdmin,
+        tocken: generateToken(createUser),
+      })
+    }
+  })
+)
+
 userRouter.get(
   '/seed',
   expressAsyncHandler(async (req, res) => { // show error instead of keep loading
-    await User.remove({});
+    // await User.remove({});
     const createdUsers = await User.insertMany(data.users);
     res.send({ createdUsers });
   })

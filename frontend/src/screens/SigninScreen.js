@@ -10,10 +10,9 @@ export default function SigninScreen(props) {
     const [password, setPassword] = useState('');
     const userSignin = useSelector((state)=>state.userSignin);
     const {loading, error, userInfo} = userSignin;
-    const redirect = props.location.search 
+    const redirect = props.location.search // /?= 后面的东西
         ? props.location.search.split('=')[1]
         : '/';
-    console.log('redirect', redirect)
     const dispatch = useDispatch();
     const submitHandler = (e)=>{
         e.preventDefault(); // prevent refreshing the page
@@ -61,7 +60,8 @@ export default function SigninScreen(props) {
                 </div>
                 <div>
                     <label/>
-                    <div>New customer? <Link to="/">Create your account</Link></div>
+                    <div>New customer?{' '}
+                    <Link to={`/register?=${redirect}`}>Create your account</Link></div>
                 </div>
             </form>
         </div>
