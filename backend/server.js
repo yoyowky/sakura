@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
+import orderRouter from './routers/orderRouter.js';
 
 dotenv.config(); // add .env file
 // creste app from express
@@ -21,7 +22,8 @@ mongoose.connect(process.env.MONGODY_URL || 'mongodb://localhost/easy-shop', {
 
 // use sub router
 app.use('/api/users', userRouter);
-app.use('/api/products', productRouter)
+app.use('/api/products', productRouter);
+app.use('/api/orders', orderRouter)
 
 // define route
 app.get('/',(req, res)=> {

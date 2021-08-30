@@ -11,10 +11,10 @@ export default function PlaceOrderScreen(props) {
         props.history.push('/payment');
       }
     const fixPrice = (num) => num.toFixed(2); // 1.111111=>1.11
-    cart.itemPrice = fixPrice(cartItems.reduce((a,c)=>a+c.price*c.qty, 0));
-    cart.shippingPrice = cart.itemPrice>100 ? fixPrice(0) : fixPrice(10);
-    cart.taxPrice = fixPrice(cart.itemPrice*1.13);
-    cart.totalPrice = fixPrice(Number(cart.itemPrice) + Number(cart.shippingPrice) + Number(cart.taxPrice));
+    cart.itemsPrice = fixPrice(cartItems.reduce((a,c)=>a+c.price*c.qty, 0));
+    cart.shippingPrice = cart.itemsPrice>100 ? fixPrice(0) : fixPrice(10);
+    cart.taxPrice = fixPrice(cart.itemsPrice*1.13);
+    cart.totalPrice = fixPrice(Number(cart.itemsPrice) + Number(cart.shippingPrice) + Number(cart.taxPrice));
     const placeOrderHandler = ()=>{
         console.log('111')
     }
@@ -72,7 +72,7 @@ export default function PlaceOrderScreen(props) {
                             <li>
                                 <div className="row">
                                     <div>Items: </div>
-                                    <div>{cart.itemPrice}</div>
+                                    <div>{cart.itemsPrice}</div>
                                 </div>
                             </li>
                             <li>
