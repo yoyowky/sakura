@@ -10,6 +10,7 @@ orderRouter.post(
     '/',
     isAuth,
     expressAsyncHandler(async (req, res)=>{
+        console.log('req', req)
         const order = new Order({
             orderItems: req.body.orderItems,
             shippingAddress: req.body.shippingAddress,

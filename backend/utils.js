@@ -16,13 +16,15 @@ export const generateToken = (user)=>{
 }
 
 export const isAuth = (req, res, next) => {
+    console.log('req', req)
     const authorization = req.headers.authorization;
+    console.log('authorization',authorization)
     if(authorization){
-        const token = authorization.slice(7, authorization); // Bearer XXXXXX => XXXXXX
+        const token = authorization.slice(7, authorization.length); // Bearer XXXXXX => XXXXXX
         console.log('token', token)
         jwt.verify(
         token,
-        process.env.JWT_SECRET || 'somethingsecret',
+        process.env.JWT_SECRET || 'somethingsecrete',
         (err, decode)=>{ // decode contains the user data
             console.log('decode', decode)
             if(err){
