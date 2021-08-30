@@ -8,13 +8,13 @@ import ProductScreen from './screens/ProductScreen.js';
 import SigninScreen from './screens/SigninScreen.js';
 import RegisterScreen from './screens/RegisterScreen.js';
 import ShippingAddressScreen from './screens/ShippingAddressScreen.js';
+import PaymentScreen from './screens/PaymentScreen.js';
 
 function App() {
   const cart = useSelector(state=>state.cart);
   const {cartItems} = cart;
   const userSignin = useSelector(state=>state.userSignin);
   const {userInfo} = userSignin;
-  console.log('userInfo', userInfo)
   const dispatch = useDispatch();
   const signoutHandler = () => {
     dispatch(signout())
@@ -54,6 +54,7 @@ function App() {
             <Route path="/signin" component={SigninScreen}></Route>
             <Route path="/register" component={RegisterScreen}></Route>
             <Route path="/shipping" component={ShippingAddressScreen}></Route>
+            <Route path="/payment" component={PaymentScreen}></Route>
           </main>
           <footer className="row center">
               <div>All right reserved</div>

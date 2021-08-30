@@ -220,7 +220,7 @@ img.small{
   margin: 0 auto;
 }
 .form > div {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   margin: 1rem;
 }
@@ -262,4 +262,12 @@ img.small{
 .checkout-steps > div.active {
   border-top-color: #f08000;
   color: #f08000;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
